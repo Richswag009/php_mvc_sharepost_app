@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+ Options -Multiviews
+ RewriteEngine On
+ Rewritebase /SharePost/public
+  Rewritecond %{REQUEST_FILENAME} !-f
+  Rewritecond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+ </IfModule>
